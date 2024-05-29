@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <main>
         <h1>Registration Form</h1>
         <p>Please fill out the following form with the required information</p>
-        <form action="">
+        <form action="" method="post">
             <section class="info">
                 <label for="name">Enter your first name:</label>
                 <input type="text" name="name" id="name" required>
@@ -21,15 +22,16 @@
                 <input type="password" name="password" id="password" required>
             </section>
             <hr>
-            <section class="account"">
+            <section class="account">
                 <p>Account type (required):</p>
-                <input type="radio" name="personal-business" id="personal" value="personal" checked><label for="personal">Personal</label>
-                <input type="radio" name="personal-business" id="business" value="business"><label for="business">Business</label>
+                <label><input type="radio" name="personal-business" id="personal" value="personal" checked>Personal</label>
+                <br>
+                <lable><input type="radio" name="personal-business" id="business" value="business">Business</label>
             </section>
             <hr>
             <section class="bio">
                 <label for="picture">Upload a profile picture:</label>
-                <input type="file" name="picture" id="picture" required> 
+                <input type="file" name="picture" id="picture"> 
                 <label for="age">Input your age (years):</label>
                 <input type="number" name="age" id="age" min="18" max="100" required> 
                 <label for="select">How did you hear about us?</label>
@@ -41,10 +43,10 @@
                     <option value="other">Other</option>
                 </select>
                 <label for="textarea">Provide a bio:</label>
-                <textarea name="textarea" id="textarea" placeholder="I like coding on the beach..."></textarea>
+                <textarea name="textarea" id="textarea" placeholder="I like coding on the beach..." rows="10" columns="100"></textarea>
             </section>
             <section class="final">
-                <input type="checkbox" name="terms" id="terms" value="accepted" required checked><label for="terms">I accept the <a href="https://freecodecamp.org/news/terms-of-service">terms and conditions</a></label>
+                <input type="checkbox" name="terms" id="terms" value="accepted" required><label for="terms">I accept the <a href="https://freecodecamp.org/news/terms-of-service">terms and conditions</a></label>
                 <input type="submit" value="Submit">
             </section>
         </form>
