@@ -1,4 +1,7 @@
 body {
+    width: 100%;
+    margin: 0;
+    min-height: 100vh;
     background-color: #00002a;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +30,11 @@ hr {
     margin: 2rem 0;
 }
 
-section input[type="text"], section input[type="email"], section input[type="password"], section input[type="file"], section input[type="number"] {
+fieldset {
+    border: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="file"], input[type="number"] {
     display: block;
     width: 100%;
     height: 2rem;
@@ -38,8 +45,16 @@ section input[type="text"], section input[type="email"], section input[type="pas
     margin-bottom: 2rem;
 }
 
+input[type="file"] {
+    height: auto;
+}
+
 .info label, .bio label {
     display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.account legend {
     margin-bottom: 1rem;
 }
 
@@ -49,32 +64,37 @@ section input[type="text"], section input[type="email"], section input[type="pas
 
 input[type="radio"], input[type="checkbox"] {
     margin-right: 0.5rem;
+    vertical-align: middle;
 }
 
 .bio select {
     display: block;
     margin-bottom: 2rem;
+    height: 2rem;
 }
 
 .bio textarea {
     display: block;
     resize: none;
     width: 100%;
+    height: 4rem;
     background-color: #0b0012;
     color: white;
+    border: none;
 }
 
-section input[type="submit"] {
+input[type="submit"] {
     display: block;
     width: 40%;
     margin: 1rem auto;
     font-size: 1.25rem;
     height: 2.5rem;
+    color: white;
     background-color: #2f1e39;
     border: 0.1rem solid white;
 }
 
-section input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: gold;
     color: #0b0012;
     text-transform: uppercase;
